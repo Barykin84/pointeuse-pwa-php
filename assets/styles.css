@@ -1,0 +1,41 @@
+body { -webkit-font-smoothing: antialiased; }
+.card { border-radius: .75rem; }
+
+/* Boutons confort tactiles */
+.tap-big { padding: 1rem 1.25rem; font-size: 1.125rem; }
+.action-stack > * + * { margin-top: .75rem; }
+
+/* Bandeau statut */
+.status-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: .75rem 1rem;
+  border-radius: .75rem;
+  margin-bottom: .75rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+/* Footer d’action mobile (visible seulement <576px via .d-sm-none) */
+.action-footer-mobile {
+  position: sticky; bottom: 0; left: 0; right: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: .5rem;
+  padding: .5rem;
+  background: rgba(255,255,255,.95);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-top: 1px solid #eee;
+  z-index: 1030;
+}
+
+/* Mobile: transformer le tableau en "cartes" lisibles */
+@media (max-width: 575.98px) {
+  #tbl thead { display: none; }
+  #tbl, #tbl tbody, #tbl tr, #tbl td { display: block; width: 100%; }
+  #tbl tr { background: #fff; border: 1px solid #eee; border-radius: .75rem;
+            padding: .5rem .75rem; margin-bottom: .5rem; }
+  #tbl td { display: flex; justify-content: space-between; padding: .25rem 0; }
+  /* Labels courts à gauche pour chaque cellule */
+  #tbl td:nth-child(1)::before { content: "#"; color:#6c757d; }
+  #tbl td:nth-child(2)::before { content: "Début"; color:#6c757d; }
+  #tbl td:nth-child(3)::before { content: "Fin"; color:#6c757d; }
+  #tbl td:nth-child(4)::before { content: "Durée"; color:#6c757d; }
+}

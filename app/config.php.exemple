@@ -1,0 +1,15 @@
+<?php
+//app/config.php.exemple
+return [
+  'db' => [
+    'dsn'  => 'host',
+    'user' => 'user',
+    'pass' => 'password',
+    'options' => [
+      PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+      PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    ],
+  ],
+  'timezone' => 'Europe/Paris',
+  'app_name' => 'Pointeuse PWA',
+];

@@ -1,0 +1,15 @@
+# Sécurité : Secrets et Config
+.env
+app/config.php
+
+# IDE et Système Mac
+.vscode/
+.DS_Store
+
+# Python (pour tes 5h d'immersion)
+__pycache__/
+.venv/
+*.pyc
+
+# Fichiers temporaires ou logs (Optionnel mais recommandé)
+*.log
